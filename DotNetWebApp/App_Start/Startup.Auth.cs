@@ -12,6 +12,8 @@ using System.Web;
 using System.IdentityModel.Claims;
 
 using TaskWebApp.Models;
+using Microsoft.Owin.Security.OpenIdConnect;
+using Microsoft.IdentityModel.Tokens;
 
 namespace TaskWebApp
 {

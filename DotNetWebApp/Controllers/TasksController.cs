@@ -106,7 +106,7 @@ namespace TaskWebApp.Controllers
                     case HttpStatusCode.OK:
                     case HttpStatusCode.NoContent:
                     case HttpStatusCode.Created:
-                        return new RedirectResult("/Tasks");
+                        return new System.Web.Mvc.RedirectResult("/Tasks");
                     case HttpStatusCode.Unauthorized:
                         return ErrorAction("Please sign in again. " + response.ReasonPhrase);
                     default:
@@ -146,7 +146,7 @@ namespace TaskWebApp.Controllers
                 {
                     case HttpStatusCode.OK:
                     case HttpStatusCode.NoContent:
-                        return new RedirectResult("/Tasks");
+                        return new System.Web.Mvc.RedirectResult("/Tasks");
                     case HttpStatusCode.Unauthorized:
                         return ErrorAction("Please sign in again. " + response.ReasonPhrase);
                     default:
@@ -162,9 +162,9 @@ namespace TaskWebApp.Controllers
         /*
          * Helper function for returning an error message
          */
-        private ActionResult ErrorAction(String message)
+        private System.Web.Mvc.ActionResult ErrorAction(String message)
         {
-            return new RedirectResult("/Error?message=" + message);
+            return new System.Web.Mvc.RedirectResult("/Error?message=" + message);
         }
 
     }
